@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="secondary-user" path="/api/v1/secondary-user" id="f118603d-ebeb-4b4a-985e-524a792b5eb8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="f118603d-ebeb-4b4a-985e-524a792b5eb8fileName">secondary-user</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="SecondaryUserRequest" id="3612baca-e34f-451d-a230-3d4e0aa86bd4" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>422</con:status>
+      <con:params/>
+      <con:element xmlns:sec="https://www.test-insurance.com/api/v1/secondary-user">sec:Fault</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="9664f92c-f0a7-4ad0-b08b-b63461bd9305" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://www.test-insurance.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>Berear</con:selectedAuthProfile>
+        <con:authType>OAuth 2.0</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:jmsPropertyConfig/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

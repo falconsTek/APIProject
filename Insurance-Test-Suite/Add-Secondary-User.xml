@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="1282ff73-dda5-47dd-bc2c-ee857605e78d" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Add Secondary User" searchProperties="true" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="1282ff73-dda5-47dd-bc2c-ee857605e78dfileName">Add-Secondary-User</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="REST Request" id="66aea445-8cd5-4c22-8356-b7d07ed5e5cd">
+    <con:settings/>
+    <con:config service="https://www.test-insurance.com" methodName="SecondaryUserRequest" resourcePath="/api/v1/secondary-user" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="REST Request" id="0c109013-9f1d-494c-9072-f22f651466b8" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://www.test-insurance.com</con:endpoint>
+        <con:request>{
+  "primaryPersonId": "129",
+  "secondaryPerson": {
+    "username": "shaiq",
+    "email": "qiahs@gmail.com",
+    "title": "Mr.",
+    "firstName": "shaiq",
+    "lastName": "shaiq",
+    "gender": "M",
+    "maritalStatus": "Single",
+    "employmentStatus": "student",
+    "dateOfBirth": "2000-01-01",
+    "languagePref": "en",
+    "password": "123"
+  },
+  "secondaryPersonMailingAddress": {
+    "addressType": "USA",
+    "addressLine1": "123 Nowhere st",
+    "city": "NoWhere",
+    "state": "NoWhere",
+    "postalCode": "123456",
+    "countryCode": "+1"
+  }
+}</con:request>
+        <con:originalUri>https://www.test-insurance.com/api/v1/secondary-user</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>Berear</con:selectedAuthProfile>
+          <con:authType>OAuth 2.0</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="payment" path="/api/v1/payment" id="360956be-23c9-4471-ba92-4a21d8a81115" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="360956be-23c9-4471-ba92-4a21d8a81115fileName">payment</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="PaymentRequest" id="fb13ea54-3898-4bfc-abde-c169714e141d" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Request 1" id="2ab8d87a-6e31-4a04-b17c-1bdfa810ff32" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://www.test-insurance.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>Berear</con:selectedAuthProfile>
+        <con:authType>OAuth 2.0</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:jmsPropertyConfig/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

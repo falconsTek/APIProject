@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="UpdateUser" path="/api/v1/user{userID}" id="cb2de989-9dc1-466c-81eb-db3ee922e664" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="cb2de989-9dc1-466c-81eb-db3ee922e664fileName">UpdateUser</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter>
+      <con:name>userID</con:name>
+      <con:value/>
+      <con:style>TEMPLATE</con:style>
+      <con:default/>
+      <con:description xsi:nil="true"/>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="UpdateUserRequest" id="9ea49e42-d5da-4ebb-925e-80e3713d9ad5" method="PUT">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Request 1" id="1ac8d53d-e00e-4eb7-b5a4-1ab6627efd65" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://www.test-insurance.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>Berear</con:selectedAuthProfile>
+        <con:authType>OAuth 2.0</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:jmsPropertyConfig/>
+      <con:parameters/>
+      <con:parameterOrder>
+        <con:entry>userID</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="6eacb98d-471c-4e59-9e63-6599e7b7c3d8" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="CreateUser Test case" searchProperties="true" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="6eacb98d-471c-4e59-9e63-6599e7b7c3d8fileName">CreateUser-Test-case</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="REST Request" id="0f0d7f37-f050-42d1-b109-cd22241144b4">
+    <con:settings/>
+    <con:config service="https://www.test-insurance.com" methodName="CreateUserRequest" resourcePath="/api/v1/user" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="REST Request" id="2eab63e6-f6ea-4c3d-819d-75bad6bf5bd7" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://www.test-insurance.com</con:endpoint>
+        <con:request>{
+  "primaryPerson": {
+    "email": "a.shaiq@tekschool.us",
+    "title": "Mr.",
+    "firstName": "Shaiq",
+    "lastName": "Darwish",
+    "gender": "Male",
+    "maritalStatus": "Single",
+    "employmentStatus": "unemployed",
+    "dateOfBirth": "2000-01-01",
+    "languagePref": "en"
+  },
+  "primaryPersonMailingAddress": {
+    "addressType": "USA",
+    "addressLine1": "123 nowhere street",
+    "city": "Nowhere",
+    "state": "Nostate",
+    "postalCode": "12345",
+    "countryCode": "+1"
+  },
+  "primaryPersonPhone": {
+    "phoneNumber": "123456789",
+    "phoneExtension": "1",
+    "phoneTime": "day",
+    "phoneType": "mobile"
+  }
+}</con:request>
+        <con:originalUri>https://www.test-insurance.com/api/v1/user</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>Berear</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>
